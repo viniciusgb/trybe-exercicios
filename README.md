@@ -1,4 +1,2 @@
-# Meu repositório de exercicios parte 2
-# trybe-exercicios
-Repositório contendo todos os exercícios da Trybe. 
-# primeira alteração feita.
+# Meu repositório de exercicios
+# aqui ficam armazenados os exercicios feitos na trybe
