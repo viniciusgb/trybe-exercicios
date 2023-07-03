@@ -1,2 +1,3 @@
 # Meu repositório de exercicios
-# aqui ficam armazenados os exercicios feitos na trybe 2
+# aqui ficam armazenados os exercicios feitos na trybe 3
+# terceira vez
