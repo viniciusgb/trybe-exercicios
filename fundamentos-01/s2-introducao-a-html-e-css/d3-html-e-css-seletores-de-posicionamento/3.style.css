@@ -1,0 +1,20 @@
+h1, p, ol {
+
+    text-align: center;
+}
+
+ol :hover {
+
+    background-color: aquamarine;
+}
+
+ol :active {
+
+    font-family: sans-serif;
+
+}
+
+li {
+
+    list-style: none;
+}
