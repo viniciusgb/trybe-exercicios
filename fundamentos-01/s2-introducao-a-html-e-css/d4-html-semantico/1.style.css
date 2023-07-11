@@ -1,0 +1,61 @@
+/*
+Primeiro passo: Vamos remover os marcadores de lista utilizando a propriedade list-style: none da tag ul;
+
+Segundo passo: Vamos centralizar o elemento da lista que representa o primeiro colocado(classe .first) com as propriedades margin-left: auto e margin-right: auto;
+
+Terceiro Passo: Vamos aplicar a propriedade display: inline-block nos elementos da lista que representam o segundo e o terceiro colocado para que 
+fiquem um ao lado do outro;
+
+Quarto Passo: Vamos centralizar todas as tags h3 ao centro da página, para isso podemos utilizar a propriedade text-align: center; 
+
+Quinto Passo: Também vamos centralizar todos os elementos de lista desordenada(tag ul), assim o restante do texto e os elementos que representam o segundo e 
+terceiro lugar do ranking também serão centralizados;
+
+Sexto Passo: Por fim, vamos adicionar à classe .premiacao, e a todos os elementos de lista a propriedade display: inline.
+*/
+
+h1 {
+text-align: center;
+}
+
+.first {
+background-color: rgb(235, 200, 84);
+font-size: 20px;
+height: 50px;
+text-align: center;
+width: 300px;
+margin-left: auto; /* 2 */
+margin-right: auto;/* 2 */
+}
+
+.second {
+background-color: rgb(219, 219, 219);
+font-size: 20px;
+height: 50px;
+text-align: center;
+width: 300px;
+display: inline-block; /* 3 */
+}
+
+.third {
+background-color: rgb(170, 142, 106);
+font-size: 20px;
+height: 50px;
+text-align: center;
+width: 300px;
+display: inline-block; /* 3 */
+}
+
+ul {
+    list-style: none; /* 1 */
+    text-align: center; /* 4 */ 
+}
+
+
+h3 {
+    text-align: center; /* 4 */
+}
+
+.premiacao ul li {
+    display: inline;
+}
