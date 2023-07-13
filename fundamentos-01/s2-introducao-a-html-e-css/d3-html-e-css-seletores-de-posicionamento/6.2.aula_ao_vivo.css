@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .header {
+    background-color: black;
+    color: white;
+    width: 60%;
+    min-width: 1000px;
+    margin: auto;
+  }
+  
+  .header-container {
+    background-color: black;
+  }
+  
+  .header img {
+    width: 100px;
+    padding: 15px 0;
+  }
+  
+  .header ul {
+    display: inline;
+    float: right;
+    padding-top: 20px;
+  }
+  
+  .header li {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header a:hover {
+    color: #1ed760;
+  }
+  
+  .premium {
+    background-color: rgb(29, 117, 222);
+    color: white;
+    padding: 72px 0 40px 0;
+  }
+  
+  .premium-content {
+    width: 60%;
+    min-width: 1000px;
+    margin: auto;
+  }
+  
+  .premium-content h1 {
+    font-size: 30px;
+  }
+  
+  .premium-content h2 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  .premium-content h1, .premium-content h2 {
+    padding-bottom: 30px;
+  }
+  
+  .premium-content a {
+    color: white;
+  }
+  
+  .premium-content p {
+    padding-top: 20px;
+    font-size: 10px;
+    font-weight: 200;
+  }
+  
+  .premium-buttons {
+    display: inline-block;
+    border-radius: 100px;
+    padding: 12px 20px;
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  
+  .comece-agora {
+    background-color: black;
+    /* transition: all 600ms ease; */
+  }
+  
+  .ver-planos {
+    border: 1px solid white;
+  }
+  
+  .comece-agora:hover, .ver-planos:hover {
+    padding: 15px 22px;
+    opacity: 1;
+  }
+  
+  .ver-planos:hover {
+    background-color: #175DB1;
+  }
+  
+  .why-premium {
+    text-align: center;
+  }
+  
+  .why-premium div {
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .why-premium h2 {
+    margin: 50px 0;
+    font-size: 30px;
+  }
+  
+  .why-premium img {
+    padding-bottom: 25px;
+  }
+  
+  .footer {
+    background-color: #efefef;
+    text-align: center;
+    height: 550px;
+  }
+  
+  .footer h2 {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+  
+  .footer h3 {
+    font-weight: 400;
+    padding-bottom: 60px;
+  }
+  
+  .favorites-bands {
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.84);
+  }
+  
+  .favorites-bands h3 {
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 40px;
+  }
+  
+  .favorites-bands ol {
+    list-style: none;
+    padding-bottom: 40px;
+  }
+  
+  .favorites-bands a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .favorites-bands a:hover {
+    background-color: #1ed760;
+  }
