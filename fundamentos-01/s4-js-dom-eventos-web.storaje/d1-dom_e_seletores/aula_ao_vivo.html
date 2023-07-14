@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas dos Projetos</title>
+  <style>
+    * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  background-color: green;
+  /* max-width: 50%; */
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 20px 5px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 25px;
+}
+
+img {
+  margin-left: 200px;
+  margin-bottom: 40px;
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 50%;
+}
+
+.student-info {
+  display: inline-block;
+  text-align: center;
+}
+
+.result {
+  max-width: 40%;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.green {
+  color: white;
+  background-color: green;
+  font-size: 40px;
+}
+
+.red {
+  color: white;
+  background-color: red;
+  font-size: 40px;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Aprovação em projetos - Trybe - Turma 35</h1>
+  </header>
+
+  <main>
+    <section class="student-info">
+      <div>
+        <h2 class="title">Nome da pessoa estudante:</h2>
+        <p id="name"></p>
+      </div>
+
+      <div>
+        <h2 class="title">Nota no Projeto Lessons Learned:</h2>
+        <p id="gradeLessonsLearned"></p>
+      </div>
+
+      <div>
+        <h2 class="title">Nota no Projeto Pirilampo:</h2>
+        <p id="gradePirilampo"></p>
+      </div>
+
+      <div>
+        <h2 class="title">Nota no Projeto Pixels Art:</h2>
+        <p id="gradePixelsArt"></p>
+      </div>
+    </section>
+    <div class="student-info">
+      <img src="" alt="" id="picture">
+    </div>
+
+    <hr>
+
+    <div class="result">
+      <h2 class="title">Resultado Final:</h2>
+      <p id="results"></p>
+    </div>
+  </main>
+
+</body>
+
+<script>
+
+const randomIndex = (number) => Math.floor(Math.random() * number);
+
+const students35 = {
+  studentsInfo: [
+    {
+      picture: "./images/anadu.png",
+      trybe: "CH35",
+      studentName: "AnaDu",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/cadu.png",
+      trybe: "CH35",
+      studentName: "Cadu",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/gus.png",
+      trybe: "CH35",
+      studentName: "Gus",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/luquinha.png",
+      trybe: "CH35",
+      studentName: "Luquinha",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/nat.png",
+      trybe: "CH35",
+      studentName: "Nat",
+      projectLessonsLearned: 5, 
+      projectPirilampo: 45,
+      projectPixelsArt: 40,
+    },
+    {
+      picture: "./images/rods.png",
+      trybe: "CH35",
+      studentName: "Rods",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/thayna.png",
+      trybe: "CH35",
+      studentName: "Tatá",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/vic.png",
+      trybe: "CH35",
+      studentName: "Vic",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+    {
+      picture: "./images/vitor.png",
+      trybe: "CH35",
+      studentName: "Vitor",
+      projectLessonsLearned: randomIndex(6), 
+      projectPirilampo: randomIndex(56),
+      projectPixelsArt: randomIndex(41),
+    },
+  ]
+}
+
+const studentName = document.querySelector('#name');
+const lessonsLearned = document.getElementById('gradeLessonsLearned');
+const pirilampo = document.getElementById('gradePirilampo');
+const pixelsArt = document.getElementById('gradePixelsArt');
+const picture = document.getElementById('picture');
+const result = document.getElementById('results');
+
+const getStudentInfo = () => {
+  const array = students35.studentsInfo;
+  const number = randomIndex(array.length);
+
+  studentName.innerText = array[number].studentName;
+  lessonsLearned.innerText = array[number].projectLessonsLearned;
+  pirilampo.innerText = array[number].projectPirilampo;
+  pixelsArt.innerText = array[number].projectPixelsArt;
+  picture.src = array[number].picture;
+  // result.innerText = 'Ainda nada!'
+  verifYScore();
+}
+
+const verifYScore = () => {
+  const sum = parseInt(lessonsLearned.innerText) + parseInt(pirilampo.innerText) + parseInt(pixelsArt.innerText);
+
+  if (sum >= 85) {
+    result.innerText = `${sum} - Meus parabéns, você foi aprovada(o)`;
+    result.className = 'green';
+  } else {
+    result.innerText = `${sum} - Sinto muito, você não foi aprovada(o). Estude mais!!!`;
+    result.className = 'red';
+  }
+}
+
+randomIndex();
+getStudentInfo();
+
+</script>
+</html>
